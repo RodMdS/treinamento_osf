@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <script src="js/jquery.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a href="#" class="navbar-brand">Canal 2</a>
+                <button class="navbar-toggler" type="button"
+                    data-toggle="collapse" 
+                    data-target="#navbarNavDropdown" 
+                    aria-controls="navbarNavDropdown"
+                    aria-expanded="false" 
+                    aria-label="Toggle Navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                                <a href="#" class="nav-link">Notícias</a>
+                        </li>
+                        <li class="nav-item active">
+                                <a href="#" class="nav-link">Denuncie</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <br>
+        <div class="container">
+            <h1>Faça sua denúncia, que a investigaremos.</h1>
+            <form id="myForm">
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" name="name" class="form-control" placeholder="Digite seu nome">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" class="form-control" placeholder="Digite seu email">
+                    <small class="form-text text-muted">
+                        Entraremos em contato com você por este email, caso seja necessário.
+                    </small>
+                </div>
+                <div class="form-group">
+                    <label for="mensage">Denúncia</label>
+                    <textarea class="form-control" name="mensage" 
+                        id="mensage" cols="30" rows="10" placeholder="Digite sua denúncia"></textarea>
+                </div>
+                <button class="btn btn-primary" type="submit">Enviar</button>
+            </form>
+        </div>
+        <br>
+        <footer class="mastfoot mt-auto">
+            <div class="card text-center">
+                <div class="card-header">
+                    Atividade de construção de template básico.
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Feito por: </h5>
+                    <a href="https://github.com/rodmds">Rodrigo Machado</a>
+                </div>
+                <div class="card-footer text-muted">
+                    19 de novembro de 2018
+                </div>
+            </div>            
+        </footer>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
