@@ -1,0 +1,23 @@
+body {
+    background: #F0F8FF;
+}
+
+#front {
+    text-align: center;
+}
+
+#title {
+    text-align: center;
+}
+
+#table {
+    text-align: center;
+}
+
+#footer {
+    background: #D8BFD8;
+}
+
+#span {
+    color: gray;
+}

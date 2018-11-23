@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>List</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+    <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a href="/" class="navbar-brand">Home</a>
+        <button class="navbar-toggler" type="button"
+            data-toggle="collapse" 
+            data-target="#navbarNavDropdown" 
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false" 
+            aria-label="Toggle Navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a href="/list" class="nav-link">List</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/form" class="nav-link">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/find" class="nav-link">Search</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    </header><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="title">
+                    <img src="img/logo.jpeg" width="75px" height="75px" />
+                    <h3> OSF Global Services </h3>
+                    <p> Contacts list </p>
+                </div>
+                <div id="table">
+                    <table class="table table-bordred table-striped">
+                        <thead>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Gender</th>
+                            <th></th>
+                            <th></th>
+                        </thead>
+                        <tbody>
+                            <% for(var i in contacts) { %>
+                                <tr>
+                                    <td> <%= contacts[i]._id %> </td>
+                                    <td> <%= contacts[i].name %> </td>
+                                    <td> <%= contacts[i].email %> </td>
+                                    <td> <%= contacts[i].phone %> </td>
+                                    <td> <%= contacts[i].gender %> </td>
+                                    <td>
+                                        <form method="POST" action="/update">
+                                            <input type="text" name="id" hidden value=<%= contacts[i]._id %>  >
+                                            <button type="submit" class="btn btn-warning">Edit</button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form method="POST" action="/delete">
+                                            <input type="text" name="id" hidden value=<%= contacts[i]._id %>  >
+                                            <button type="submit" class="btn btn-danger">Delete</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            <% } %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer" class="page-footer font-small blue">
+        <div class="footer-copyright text-center py-3">© 2018 Copyright:
+            <a href="https://github.com/rodmds">Rodrigo Machado</a>.
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
